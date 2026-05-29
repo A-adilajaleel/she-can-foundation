@@ -1,43 +1,48 @@
-# She Can Foundation - Full Stack Contact Management System
+# 🌸 She Can Foundation – Full Stack Contact Management System
 
-## 📌 Project Overview
+## 📖 Overview
 
-This project was developed as part of a Full Stack Development Internship Task for She Can Foundation.
+She Can Foundation Contact Management System is a full-stack web application developed as part of a Full Stack Development Internship Task.
 
-The application allows users to submit contact details and messages through a responsive contact form. Submitted data is stored in a database and can be managed through the Django Admin Panel.
+The application allows users to submit their contact details and messages through a responsive contact form. Submitted information is securely stored in a database and can be managed through the Django Admin Dashboard.
 
 ---
 
-## 🚀 Features
+## 🚀 Live Website
+
+🔗 https://she-can-foundation-sepia.vercel.app/
+
+---
+
+## ✨ Features
 
 ### Frontend Features
 
-* Contact Form
-* Name Field
-* Email Field
-* Message Field
-* Responsive Design
-* Form Validation
+* Responsive Contact Form
+* Real-Time Form Validation
 * Success Message Display
+* Mobile-Friendly Design
+* Modern User Interface
 
 ### Backend Features
 
 * Django REST Framework API
 * Contact Form Submission Endpoint
-* Server-side Validation
-* JSON API Responses
+* Server-Side Validation
+* JSON-Based API Responses
 
 ### Database Features
 
 * SQLite Database Integration
 * Automatic Data Storage
+* Persistent Contact Records
 
-### Admin Features
+### Admin Dashboard
 
-* Django Authentication
-* Admin Login
-* View Contact Submissions
-* Manage Contact Records
+* Secure Authentication
+* Contact Management
+* View User Submissions
+* Search and Manage Records
 
 ---
 
@@ -46,6 +51,7 @@ The application allows users to submit contact details and messages through a re
 ### Frontend
 
 * React.js
+* Vite
 * JavaScript
 * Tailwind CSS
 
@@ -54,10 +60,16 @@ The application allows users to submit contact details and messages through a re
 * Django
 * Django REST Framework
 * django-cors-headers
+* Gunicorn
 
 ### Database
 
 * SQLite3
+
+### Deployment
+
+* Vercel (Frontend)
+* Render (Backend)
 
 ---
 
@@ -67,26 +79,12 @@ The application allows users to submit contact details and messages through a re
 she-can-foundation/
 
 ├── backend/
-│   ├── core/
-│   │   ├── contact/
-│   │   │   ├── migrations/
-│   │   │   ├── admin.py
-│   │   │   ├── apps.py
-│   │   │   ├── models.py
-│   │   │   ├── serializers.py
-│   │   │   ├── urls.py
-│   │   │   └── views.py
-│   │   │
-│   │   ├── core/
-│   │   │   ├── settings.py
-│   │   │   ├── urls.py
-│   │   │   ├── asgi.py
-│   │   │   └── wsgi.py
-│   │   │
-│   │   ├── db.sqlite3
-│   │   └── manage.py
-│   │
-│   └── venv/
+│   └── core/
+│       ├── contact/
+│       ├── core/
+│       ├── manage.py
+│       ├── requirements.txt
+│       └── db.sqlite3
 │
 ├── frontend/
 │   ├── public/
@@ -97,7 +95,8 @@ she-can-foundation/
 │   │   └── main.jsx
 │   │
 │   ├── package.json
-│   └── vite.config.js
+│   ├── vite.config.js
+│   └── vercel.json
 │
 └── README.md
 ```
@@ -106,15 +105,13 @@ she-can-foundation/
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone Repository
+### Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/A-adilajaleel/she-can-foundation.git
 ```
 
----
-
-### 2️⃣ Backend Setup
+### Backend Setup
 
 ```bash
 cd backend/core
@@ -123,24 +120,20 @@ python -m venv venv
 
 venv\Scripts\activate
 
-pip install django
-pip install djangorestframework
-pip install django-cors-headers
+pip install -r requirements.txt
 
 python manage.py migrate
 
 python manage.py runserver
 ```
 
-Backend will run at:
+Backend runs on:
 
 ```text
 http://127.0.0.1:8000
 ```
 
----
-
-### 3️⃣ Frontend Setup
+### Frontend Setup
 
 ```bash
 cd frontend
@@ -150,7 +143,7 @@ npm install
 npm run dev
 ```
 
-Frontend will run at:
+Frontend runs on:
 
 ```text
 http://localhost:5173
@@ -187,20 +180,21 @@ POST /api/contact/
 
 ---
 
-## 🔐 Admin Panel
+## 🔐 Admin Dashboard
 
-Admin Dashboard:
+Admin Panel Access:
 
 ```text
 http://127.0.0.1:8000/admin
 ```
 
-Features:
+### Admin Features
 
-* Secure Login
-* View Submitted Contacts
-* Search Contacts
-* Manage Records
+* Secure Login Authentication
+* View Contact Submissions
+* Manage Contact Records
+* Search User Entries
+* Monitor Submitted Messages
 
 ---
 
@@ -226,7 +220,7 @@ Features:
 
 ✅ Admin Panel
 
-✅ APIs
+✅ REST APIs
 
 ✅ Form Validation
 
@@ -234,10 +228,17 @@ Features:
 
 ✅ Backend Features
 
+✅ Deployment (Vercel & Render)
+
 ---
 
 ## 👩‍💻 Developed By
 
 **Adila Jaleel**
 
-Full Stack Development Internship Submission for She Can Foundation.
+B.Tech Computer Science Graduate
+Full Stack Development Internship Submission
+
+---
+
+
