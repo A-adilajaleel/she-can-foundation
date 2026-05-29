@@ -46,6 +46,7 @@ function ContactForm() {
 const handleSubmit = async (e) => {
   e.preventDefault()
 
+  console.log("Submit button clicked")
   const validationErrors = validate()
 
   if (Object.keys(validationErrors).length > 0) {
@@ -55,7 +56,7 @@ const handleSubmit = async (e) => {
 
   try {
     const response = await fetch(
-      'https://she-can-foundation-backend.onrender.com/api/contact/',
+      'https://she-can-foundation-vh8z.onrender.com/api/contact/',
       {
         method: 'POST',
         headers: {
