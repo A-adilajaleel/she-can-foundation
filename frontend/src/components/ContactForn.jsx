@@ -43,47 +43,47 @@ function ContactForm() {
     })
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+const handleSubmit = async (e) => {
+  e.preventDefault()
 
-    const validationErrors = validate()
+  const validationErrors = validate()
 
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors)
-      return
-    }
-
-    try {
-      const response = await fetch(
-        'http://127.0.0.1:8000/api/contact/',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(formData)
-        }
-      )
-
-      const data = await response.json()
-
-      if (response.ok) {
-        setSuccessMessage(data.message)
-        setSubmitted(true)
-
-        setFormData({
-          name: '',
-          email: '',
-          message: ''
-        })
-      } else {
-        alert('Submission failed')
-      }
-    } catch (error) {
-      console.error(error)
-      alert('Server error')
-    }
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors)
+    return
   }
+
+  try {
+    const response = await fetch(
+      'https://she-can-foundation-backend.onrender.com/api/contact/',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      }
+    )
+
+    const data = await response.json()
+
+    if (response.ok) {
+      setSuccessMessage(data.message)
+      setSubmitted(true)
+
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      })
+    } else {
+      alert('Submission failed')
+    }
+  } catch (error) {
+    console.error(error)
+    alert('Server error')
+  }
+}
 
   return (
     <div className="min-h-screen bg-pink-50 flex items-center justify-center p-4">
